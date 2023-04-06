@@ -5,6 +5,12 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_call:
+    inputs:
+      rust-version:
+        type: string
+        required: false
+        default: stable
 
 env:
   CARGO_TERM_COLOR: always

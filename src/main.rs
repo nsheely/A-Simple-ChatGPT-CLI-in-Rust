@@ -184,7 +184,6 @@ async fn main() {
     // Define the command-line interface using clap.
     let matches = App::new("ChatGPT")
         .version("1.0")
-        .author("Your Name <your.email@example.com>")
         .about("Interact with OpenAI's ChatGPT")
         .arg(
             // Define a command-line argument for single-message mode.

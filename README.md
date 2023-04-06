@@ -33,15 +33,10 @@ export OPENAI_API_KEY="your_api_key_here"
 ```
 You can get a key at https://platform.openai.com/
 
-Run the application in single-message mode: 
-```bash
-./target/release/chatgpt-rust-cli "Your message to ChatGPT"
-```
 Run the application in interactive mode:
 ```bash
 ./target/release/chatgpt-rust-cli --interactive
 ```
-Examples
 Send a single message:
 ```bash
 ./target/release/chatgpt-rust-cli "What is the capital of France?"

@@ -56,7 +56,7 @@ pub async fn interactive(
     // Enter a loop for the interactive mode.
     loop {
         // Prompt the user for input.
-        print!("You: ");
+        println!("You: ");
         // Initialize a new string to store the user input.
         let mut input = String::new();
         // Read the user input from stdin and store it in `input`.
@@ -69,7 +69,7 @@ pub async fn interactive(
             break;
         }
         // Print the ChatGPT prompt.
-        print!("ChatGPT: ");
+        println!("ChatGPT: ");
         // Call the single_message function to send the user input to the API and print the response.
         single_message(client, api_key, api_url, model, input, messages).await;
     }

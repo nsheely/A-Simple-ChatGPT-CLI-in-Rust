@@ -37,7 +37,7 @@ Add the executable to your path (where your pwd is the root of this project):
 ```bash
 export PATH=$PATH:$(pwd)/target/release
 ```
-Save your key and path to your `.bashrc` or `.zshrc` file to make it permanent.
+Save your key and path to your `.bashrc` or `.zshrc` file to make them permanent.
 
 ## Usage
 

@@ -16,7 +16,6 @@ use std::fmt;
    This module is used by the `interaction.rs` module to interact with the OpenAI API.
 */
 
-
 // Custom error type to handle both request and parsing errors.
 #[derive(Debug)]
 pub enum CustomError {
@@ -51,7 +50,7 @@ struct ChatRequest<'a> {
 // Structure for storing a message within the conversation.
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Message {
-    pub role: String,    // The role of the message's author ("user", "assistant", or "system").
+    pub role: String, // The role of the message's author ("user", "assistant", or "system").
     pub content: String, // The content of the message.
 }
 
@@ -94,20 +93,20 @@ pub async fn chat(
     if let Ok(chat_response) = chat_response {
         // If deserialization is successful, extract the first choice from the response.
         if let Some(choice) = chat_response.choices.into_iter().next() {
-        // Return the message from the extracted choice.
-        Ok(choice.message)
+            // Return the message from the extracted choice.
+            Ok(choice.message)
         } else {
-        // If there are no choices, return a default message.
-        Ok(Message {
-        role: "assistant".to_string(),
-        content: "I don't have an answer for that.".to_string(),
-        })
+            // If there are no choices, return a default message.
+            Ok(Message {
+                role: "assistant".to_string(),
+                content: "I don't have an answer for that.".to_string(),
+            })
         }
-        } else {
+    } else {
         // If deserialization fails, print the raw response and return a custom error.
         println!("Raw response: {}", response_text);
         Err(CustomError::ParseError(
-        "Error parsing the API response".to_string(),
+            "Error parsing the API response".to_string(),
         ))
     }
 }

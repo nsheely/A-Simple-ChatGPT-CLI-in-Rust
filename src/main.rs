@@ -25,7 +25,6 @@ use interaction::{interactive, single_message};
    and `interaction.rs` modules to communicate with the OpenAI API and process user input.
 */
 
-
 // The main function is an asynchronous function as it calls other async functions.
 #[tokio::main]
 async fn main() {

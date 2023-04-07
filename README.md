@@ -35,13 +35,17 @@ You can get a key at https://platform.openai.com/
 
 Run the application in interactive mode:
 ```bash
-./target/release/chatgpt-rust-cli --interactive
+./target/release/chatgpt --interactive
 ```
 Send a single message:
 ```bash
-./target/release/chatgpt-rust-cli "What is the capital of France?"
+./target/release/chatgpt "What is the capital of France?"
 ```
 Send a message from stdin:
 ```bash
-echo "What is the capital of France?" | ./target/release/chatgpt-rust-cli
+echo "What is the capital of France?" | ./target/release/chatgpt
+```
+Send the response from stdout to a file:
+```bash
+./target/release/chatgpt "What is the capital of France?" > France_Capital.txt
 ```

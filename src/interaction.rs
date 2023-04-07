@@ -1,6 +1,6 @@
 use crate::chat::{chat, Message};
 use reqwest::Client;
-use std::io::{Stdin, BufRead};
+use std::io::{BufRead, Stdin};
 
 /*
    The `interaction.rs` module contains the functions for interacting with the user in
@@ -14,7 +14,6 @@ use std::io::{Stdin, BufRead};
    This module is used by the `main.rs` module to process user input and handle
    different modes of interaction with the user.
 */
-
 
 // This function implements the single message for the chat application.
 pub async fn single_message(
